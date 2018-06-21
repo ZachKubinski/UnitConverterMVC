@@ -1,0 +1,43 @@
+﻿body {
+}
+h1{
+      font-size: 30px;
+      font-family: Georgia;
+      color: black;
+  }
+h2{
+    font-size: 18px;
+    font-family: Cambria;
+    color: black;
+}
+p{
+    font-size: 12px;
+    font-family: Cambria;
+    color : darkcyan;
+}
+.btn-primary {
+    background-color: #408c8c !important
+}
+#col1 {
+    background-color: #216369;
+}
+#col2 {
+    background-color: #207979;
+}
+#col3 {
+    background-color: #408c8c;
+}
+#col4 {
+    background-color: #7fb2b2;
+}
+#col5 {
+    background-color: #9ec5c5;
+}
+#col6 {
+    background-color: #bed8d8;
+}
+#tabs {
+    background-color: #216369;
+    height: 100vh;
+}
+

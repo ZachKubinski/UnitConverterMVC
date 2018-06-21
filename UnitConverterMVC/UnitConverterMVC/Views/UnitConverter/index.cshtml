@@ -1,0 +1,50 @@
+﻿@model int
+
+@{
+    ViewData["Title"] = "index";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div id="col1" class="col-sm-2">&nbsp;</div>
+        <div id="col2" class="col-sm-2">&nbsp;</div>
+        <div id="col3" class="col-sm-2">&nbsp;</div>
+        <div id="col4" class="col-sm-2">&nbsp;</div>
+        <div id="col5" class="col-sm-2">&nbsp;</div>
+        <div id="col6" class="col-sm-2">&nbsp;</div>
+    </div>
+    <div class="row">
+        <div id="tabs" class="col-lg-2">
+            @Html.ActionLink("Home", "Index", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
+            @Html.ActionLink("BillyConverter", "Index/BillysConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
+            @Html.ActionLink("Human Years to Dog Years", "Index/EmilysConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
+            @Html.ActionLink("Celsius to Kalvin", "Index/KevinsConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
+            @Html.ActionLink("Centimeters to Meters", "Index/ThomasConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
+            @Html.ActionLink("24 Hour Time to Military Time", "Index/ZachsConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
+        </div>
+        <div class="col-lg-2">
+            <h2>
+                Label
+            </h2>
+            <div id="app">
+                <input v-model="inputValue" />
+                <p>{{outputValue}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            inputValue: "",
+            outputValue: ""
+        },
+        methods: {
+            conversion : function () {
+
+            }
+        }
+    })
+</script>
+

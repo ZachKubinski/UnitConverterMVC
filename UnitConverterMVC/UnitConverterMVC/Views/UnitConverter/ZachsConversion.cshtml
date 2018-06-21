@@ -1,0 +1,93 @@
+﻿@model int
+
+@{
+    ViewData["Title"] = "ZachsConversion";
+}
+
+<div class="row"></div>
+<div class="col" style="background-color:deepskyblue;font-size:48px">&nbsp;</div>
+<div class="page-header">
+    <h1>Unit Conversions</h1>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div id="col1" class="col-sm-2">&nbsp;</div>
+        <div id="col2" class="col-sm-2">&nbsp;</div>
+        <div id="col3" class="col-sm-2">&nbsp;</div>
+        <div id="col4" class="col-sm-2">&nbsp;</div>
+        <div id="col5" class="col-sm-2">&nbsp;</div>
+        <div id="col6" class="col-sm-2">&nbsp;</div>
+    </div>
+    <div class="row">
+        <div id="tabs" class="col-lg-2">
+            <button button type="button" class="btn btn-primary btn-block" v-on:click="home">Home</button>
+            <button button type="button" class="btn btn-primary btn-block" v-on:click="conv1">BillyConverter</button>
+            <button button type="button" class="btn btn-primary btn-block" v-on:click="conv2">Human Years to Dog Years</button>
+            <button button type="button" class="btn btn-primary btn-block" v-on:click="conv3">Celsius to Kelvin</button>
+            <button button type="button" class="btn btn-primary btn-block" v-on:click="conv4">ThomasConverter</button>
+            <button button type="button" class="btn btn-primary btn-block" v-on:click="conv5">24 Hour Time to Military Time</button>
+        </div>
+        <div class="col-lg-2" height="100vh">
+            <h2>24 Hour Time to Military Time</h2>
+            <div id="app">
+                <input v-model="inputValue" v-on:keyup="conversion" placeholder="#AM" />
+                <p>Conversion: {{outputValue}} {{amOrPm}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            inputValue: "",
+            outputValue: "",
+            amOrPm: " AM"
+        },
+        methods: {
+            conversion: function () {
+                if (Number(this.inputValue) > 24) {
+                    outputValue = "Invalid Time";
+                }
+                else if (this.inputValue > 12) {
+                    this.outputValue = Number(this.inputValue) - 12;
+                    this.amOrPm = " PM";
+                }
+                else if (this.inputValue == 12) {
+                    this.outputValue = Number(this.inputValue);
+                    this.amOrPm = " PM";
+                }
+                else {
+                    this.outputValue = Number(this.inputValue);
+                    this.amOrPm = " AM";
+                }
+            }
+        }
+    })
+    var tabs = new Vue({
+        el: '#tabs',
+        data: {
+
+        },
+        methods: {
+            home: function () {
+                window.location = '/index.html'
+            },
+            conv1: function () {
+                window.location = '/billysconversion.html'
+            },
+            conv2: function () {
+                window.location = '/emilysconversion.html'
+            },
+            conv3: function () {
+                window.location = '/kevinsconversion.html'
+            },
+            conv4: function () {
+                window.location = '/thomasconversion.html'
+            },
+            conv5: function () {
+                window.location = '/zachsconversion.html'
+            }
+        }
+    })
+</script>
