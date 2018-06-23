@@ -4,6 +4,11 @@
     ViewData["Title"] = "index";
 }
 
+<div class="row"></div>
+<div class="col" style="background-color:deepskyblue;font-size:48px">&nbsp;</div>
+<div class="page-header">
+    <h1>Unit Conversions</h1>
+</div>
 <div class="container-fluid">
     <div class="row">
         <div id="col1" class="col-sm-2">&nbsp;</div>
@@ -16,11 +21,11 @@
     <div class="row">
         <div id="tabs" class="col-lg-2">
             @Html.ActionLink("Home", "Index", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
-            @Html.ActionLink("BillyConverter", "Index/BillysConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
-            @Html.ActionLink("Human Years to Dog Years", "Index/EmilysConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
-            @Html.ActionLink("Celsius to Kalvin", "Index/KevinsConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
-            @Html.ActionLink("Centimeters to Meters", "Index/ThomasConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
-            @Html.ActionLink("24 Hour Time to Military Time", "Index/ZachsConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
+            @Html.ActionLink("BillysConverter", "BillysConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
+            @Html.ActionLink("Human to Dog Years", "EmilysConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
+            @Html.ActionLink("Celsius to Kalvin", "KevinsConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
+            @Html.ActionLink("Centimeters to Meters", "ThomasConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
+            @Html.ActionLink("Military to 24 Hour Time", "ZachsConversion", "UnitConverter", null, new { @class = "btn btn-primary btn-block" })
         </div>
         <div class="col-lg-2">
             <h2>
@@ -41,7 +46,7 @@
             outputValue: ""
         },
         methods: {
-            conversion : function () {
+            conversion: function () {
 
             }
         }

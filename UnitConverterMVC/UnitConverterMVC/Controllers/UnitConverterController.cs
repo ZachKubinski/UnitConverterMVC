@@ -12,6 +12,31 @@ namespace UnitConverterMVC.Controllers
         {
             return View(viewName: "Index", model: 0);
         }
-        
+
+        public ActionResult ZachsConversion()
+        {
+            return View(viewName: "ZachsConversion", model: 0);
+        }
+
+        public ActionResult KevinsConversion()
+        {
+            return View(viewName: "KevinsConversion", model: 0);
+        }
+
+        public ActionResult EmilysConversion()
+        {
+            return View(viewName: "EmilysConversion", model: 0);
+        }
+
+        public ActionResult ThomasConversion()
+        {
+            return View(viewName: "ThomasConversion", model: 0);
+        }
+
+        public ActionResult BillysConversion()
+        {
+            return View(viewName: "BillysConversion", model: 0);
+        }
+
     }
 }
