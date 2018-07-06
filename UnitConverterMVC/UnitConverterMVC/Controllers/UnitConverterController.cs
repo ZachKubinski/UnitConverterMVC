@@ -23,9 +23,10 @@ namespace UnitConverterMVC.Controllers
             return View(viewName: "KevinsConversion", model: 0);
         }
 
-        public ActionResult EmilysConversion()
+     
+        public ActionResult EmilysConversion(double inputNumber)
         {
-            return View(viewName: "EmilysConversion", model: 0);
+            return View(viewName: "EmilysConversion", model:(inputNumber * 7.0));
         }
 
         public ActionResult ThomasConversion()
