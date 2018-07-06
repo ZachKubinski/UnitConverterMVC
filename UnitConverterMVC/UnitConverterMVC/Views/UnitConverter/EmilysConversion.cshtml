@@ -1,7 +1,7 @@
-﻿@model int
+﻿@model double
 
 @{
-    ViewData["Title"] = "EmilysConversion";
+    ViewBag.Title = "EmilysConversion";
 }
 
 <div class="row"></div>
@@ -29,26 +29,13 @@
         </div>
         <div class="col-lg-2">
             <h2>
-                Label
+                Human to Dog Years
             </h2>
-            <div id="app">
-                <input v-model="inputValue" />
-                <p>{{outputValue}}</p>
-            </div>
+            <form action="EmilysConversion" method="post">
+                <p><input name="inputNumber" type="number" step="any" /></p>
+                <input name="submit" type="submit" />
+            </form>
+            <p> @Model </p>
         </div>
     </div>
 </div>
-<script>
-    var app = new Vue({
-        el: '#app',
-        data: {
-            inputValue: "",
-            outputValue: ""
-        },
-        methods: {
-            conversion: function () {
-
-            }
-        }
-    })
-</script>
